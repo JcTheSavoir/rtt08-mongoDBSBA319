@@ -1,11 +1,11 @@
 //----------{Trying out the use of .mjs files instead of using the require() syntax}
 //---------------------VV---Importing at top of file per convention
-import 'dotenv/config'
+import 'dotenv/config';
 import express from 'express'; 
 import connectToDatabase from './config/connectToDataBase.mjs';
 import cors from 'cors';
 import movieRoute from './routes/movie.mjs';
-// import
+import programmingRoute from './routes/programming.mjs';
 
 //---------------VV-------------------Start of application; define app by express, define port by .env 
 const app = express();
@@ -24,8 +24,8 @@ so including it just incase. */
 connectToDatabase()
 
 //-----------------VV----------------Routes
-app.use('/movie', movieRoute);
-
+app.use('/movies', movieRoute);
+app.use('/programming', programmingRoute)
 app.use('/', (req, res) => {
     res.send("Index Page")
 });
