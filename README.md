@@ -4,10 +4,14 @@ Project Name: SBA 318 - Express Server Application
 
 Project Info: This project is used to measures to test learners on the ability to use a MongoDB Database to store and interact with data.
 API info:
-* a
-* b
-* c
-* d
+* Options: zyn, programming, movie
+* variables: x = option chosend, y = value of _id of individual entry (get this from GET all request below)
+* To GET all data in each Option, simply send a GET request to /x
+* To GET individual data from each option, simply send a GET request to /x/y
+* To CREATE a new entry for a specific option, simply send a POST request to /x
+* To Update an existing entry for a specific option, simply send a PUT request to /x/y
+* To Delete an existing entry for a specific option, simply send a Delete request to /x/y
+
 //---------------------Main Objectives-----------//
 Create a server application with Node, Express, and MongoDB.
 Create a CRUD API using Express and MongoDB.
