@@ -2,10 +2,10 @@
   "name": "mongodbappsba319",
   "version": "1.0.0",
   "description": "Project showing off MongoDB skills",
-  "main": "index.js",
+  "main": "server.mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.mjs"
   },
   "author": "J.C.",
   "license": "ISC",
