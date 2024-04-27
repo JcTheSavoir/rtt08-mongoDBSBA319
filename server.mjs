@@ -4,8 +4,10 @@ import 'dotenv/config';
 import express from 'express'; 
 import connectToDatabase from './config/connectToDataBase.mjs';
 import cors from 'cors';
+    //--------------VV-----------------Import of the three routes
 import movieRoute from './routes/movie.mjs';
 import programmingRoute from './routes/programming.mjs';
+import zynRoute from './routes/zyn.mjs'
 
 //---------------VV-------------------Start of application; define app by express, define port by .env 
 const app = express();
@@ -24,8 +26,10 @@ so including it just incase. */
 connectToDatabase()
 
 //-----------------VV----------------Routes
-app.use('/movies', movieRoute);
+app.use('/movie', movieRoute);
 app.use('/programming', programmingRoute)
+app.use('/zyn', zynRoute);
+
 app.use('/', (req, res) => {
     res.send("Index Page")
 });

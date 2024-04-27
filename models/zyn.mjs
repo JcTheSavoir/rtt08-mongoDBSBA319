@@ -9,7 +9,7 @@ const zynSchema = new mongoose.Schema({
     flavor: {type: String, default: 'Zyn'},
     //The [String] allows someone to enter an array of strings instead of a single value.  
     //Enum checks if the values entered match 1 or more of the values in the enum array
-    strength_Options: {type: [String], enum: ['3mg', '6mg'] },
+    strength_Options: {type: [String], default: ['3mg', '6mg'], enum: ['3mg', '6mg'] },
 });
 
 const Zyn = mongoose.model('Zyn', zynSchema);
