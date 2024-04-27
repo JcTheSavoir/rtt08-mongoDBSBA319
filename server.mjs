@@ -3,7 +3,8 @@
 import 'dotenv/config'
 import express from 'express'; 
 import connectToDatabase from './config/connectToDataBase.mjs';
-import cors from 'cors'
+import cors from 'cors';
+import movieRoute from './routes/movie.mjs';
 // import
 
 //---------------VV-------------------Start of application; define app by express, define port by .env 
@@ -23,6 +24,8 @@ so including it just incase. */
 connectToDatabase()
 
 //-----------------VV----------------Routes
+app.use('/movie', movieRoute);
+
 app.use('/', (req, res) => {
     res.send("Index Page")
 });

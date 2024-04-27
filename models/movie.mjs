@@ -4,7 +4,7 @@ import mongoose from 'mongoose';
 //defines the data structure that will be used in mongoDB for each instance of "Movie" (defined below by mongoos.model)
 const movieSchema = new mongoose.Schema({
     title: String,
-    release_Date: String,
+    release_Date: Date,
     main_Actress: String,
     main_Actor: String,
     trilogy: Boolean,
