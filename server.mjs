@@ -13,8 +13,11 @@ import zynRoute from './routes/zyn.mjs'
 const app = express();
 const port = process.env.PORT || 3000;
 
-//-----------------VV------ensures that "app" will convert data into json {no longer need body-parser}
+//-----------------VV------ensures that "app" will convert data into json and works 
+// correctly for all Post, put, patch request {no longer need body-parser}
+app.use(express.urlencoded())
 app.use(express.json())
+
 
 //---------------VV----------------------------------------Ensures "Cross-Origin Resource Sharing".  
 app.use(cors())
@@ -26,12 +29,12 @@ so including it just incase. */
 connectToDatabase()
 
 //-----------------VV----------------Routes
-app.use('/movie', movieRoute);
-app.use('/programming', programmingRoute)
-app.use('/zyn', zynRoute);
+app.use('/api/movie', movieRoute);
+app.use('/api/programming', programmingRoute)
+app.use('/api/zyn', zynRoute);
 
 app.use('/', (req, res) => {
-    res.send("Index Page")
+    res.send("Index Page ")
 });
 
 //-------------------------VV-----------------Listening/Start Server
