@@ -1,0 +1,20 @@
+body{
+    background-image: url("https://web-static.wrike.com/blog/content/uploads/2019/05/Application-Programming-Interface-API-Explained-1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    /* color: #FFFFFF; */
+    font-size: 1.1em;
+}
+
+.apiDocumentation{
+    display: flex;
+    flex-direction: column;
+}
+.eachApiName{
+    display: flex;
+    flex-direction: column;
+}
+.linkToApi{
+    color: #119c18;
+}
